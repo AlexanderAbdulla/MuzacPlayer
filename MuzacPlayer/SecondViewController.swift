@@ -17,6 +17,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var songImage: UIImageView!
     @IBOutlet weak var timeRemaining: UILabel!
     @IBOutlet weak var timePlayed: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
+    
     
  
     
@@ -129,6 +131,8 @@ class SecondViewController: UIViewController {
         let t = Double(round(100 * (audioPlayer.currentTime ))/100)
         timeRemaining.text = "Time Left: " + String(r) + "s"
         timePlayed.text = "Time Played: " + String(t) + "s"
+        let p = Double(round(100 * (audioPlayer.currentTime / audioPlayer.duration))/100)
+        progressBar.setProgress(Float(p), animated: true)
     }
     
 }

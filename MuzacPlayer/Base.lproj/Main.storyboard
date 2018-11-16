@@ -175,6 +175,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="progressBar" destination="02K-MR-bsr" id="Zqc-Rb-tdC"/>
                         <outlet property="songImage" destination="Tfx-I9-E1a" id="aD9-WH-0eR"/>
                         <outlet property="songLabel" destination="5bG-1i-xES" id="Ycf-ms-lmb"/>
                         <outlet property="timePlayed" destination="VfA-Bj-gpg" id="0IC-HQ-KJq"/>
