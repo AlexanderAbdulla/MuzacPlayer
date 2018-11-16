@@ -142,7 +142,7 @@ class SecondViewController: UIViewController {
             print("rotating")
            
             UIView.animate(withDuration: 1, animations: { () -> Void in
-                self.songLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi*2);
+                self.songLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi);
                 
             })
             
