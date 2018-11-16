@@ -140,9 +140,12 @@ class SecondViewController: UIViewController {
         if(audioPlayer.currentTime == 0){
             //songLabel.animateWithDuration
             print("rotating")
-           // songLabel.animate(w)
-            //songLabel.transform = showing ? CGAffineTransform(rotationAngle: .pi*2)
-            self.songLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+           
+            UIView.animate(withDuration: 1, animations: { () -> Void in
+                self.songLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi*2);
+                
+            })
+            
             
         }
     }
