@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 
+
 class SecondViewController: UIViewController {
     
     var timer = Timer();
@@ -18,6 +19,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var timeRemaining: UILabel!
     @IBOutlet weak var timePlayed: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
+    
     
     
  
@@ -127,12 +129,22 @@ class SecondViewController: UIViewController {
     }
     
     @objc func updateCounting(){
+        songLabel.text = songs[thisSong]
         let r = Double(round(100 * (audioPlayer.duration - audioPlayer.currentTime))/100)
         let t = Double(round(100 * (audioPlayer.currentTime ))/100)
         timeRemaining.text = "Time Left: " + String(r) + "s"
         timePlayed.text = "Time Played: " + String(t) + "s"
         let p = Double(round(100 * (audioPlayer.currentTime / audioPlayer.duration))/100)
         progressBar.setProgress(Float(p), animated: true)
+        
+        if(audioPlayer.currentTime == 0){
+            //songLabel.animateWithDuration
+            print("rotating")
+           // songLabel.animate(w)
+            //songLabel.transform = showing ? CGAffineTransform(rotationAngle: .pi*2)
+            self.songLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+            
+        }
     }
     
 }

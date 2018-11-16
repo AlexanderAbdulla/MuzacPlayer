@@ -35,6 +35,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             let audioPath = Bundle.main.path(forResource: songs[indexPath.row], ofType: ".mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
             
+            thisSong = indexPath.row
+            
             let string = songs[thisSong]
             let utterance = AVSpeechUtterance(string: string)
             utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
@@ -42,7 +44,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             synth.speak(utterance)
             
             audioPlayer.play()
-            thisSong = indexPath.row
+            
             audioStuffed = true
         }
         catch
