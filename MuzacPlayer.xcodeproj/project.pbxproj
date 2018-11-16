@@ -13,6 +13,13 @@
 		F39B5C13219F48C900F602CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39B5C11219F48C900F602CE /* Main.storyboard */; };
 		F39B5C15219F48CA00F602CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F39B5C14219F48CA00F602CE /* Assets.xcassets */; };
 		F39B5C18219F48CA00F602CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39B5C16219F48CA00F602CE /* LaunchScreen.storyboard */; };
+		F39B5C27219F48E300F602CE /* A Girl in Oakland.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39B5C20219F48E300F602CE /* A Girl in Oakland.mp3 */; };
+		F39B5C28219F48E300F602CE /* Find My Way Home.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39B5C21219F48E300F602CE /* Find My Way Home.mp3 */; };
+		F39B5C29219F48E300F602CE /* Fingers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39B5C22219F48E300F602CE /* Fingers.mp3 */; };
+		F39B5C2A219F48E300F602CE /* In Case You Forgot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39B5C23219F48E300F602CE /* In Case You Forgot.mp3 */; };
+		F39B5C2B219F48E300F602CE /* Mighty Fine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39B5C24219F48E300F602CE /* Mighty Fine.mp3 */; };
+		F39B5C2C219F48E300F602CE /* Otis McMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39B5C25219F48E300F602CE /* Otis McMusic.mp3 */; };
+		F39B5C2D219F48E300F602CE /* Scarlet Fire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F39B5C26219F48E300F602CE /* Scarlet Fire.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		F39B5C14219F48CA00F602CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F39B5C17219F48CA00F602CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F39B5C19219F48CA00F602CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F39B5C20219F48E300F602CE /* A Girl in Oakland.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A Girl in Oakland.mp3"; sourceTree = "<group>"; };
+		F39B5C21219F48E300F602CE /* Find My Way Home.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Find My Way Home.mp3"; sourceTree = "<group>"; };
+		F39B5C22219F48E300F602CE /* Fingers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fingers.mp3; sourceTree = "<group>"; };
+		F39B5C23219F48E300F602CE /* In Case You Forgot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "In Case You Forgot.mp3"; sourceTree = "<group>"; };
+		F39B5C24219F48E300F602CE /* Mighty Fine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mighty Fine.mp3"; sourceTree = "<group>"; };
+		F39B5C25219F48E300F602CE /* Otis McMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Otis McMusic.mp3"; sourceTree = "<group>"; };
+		F39B5C26219F48E300F602CE /* Scarlet Fire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Scarlet Fire.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +77,23 @@
 				F39B5C14219F48CA00F602CE /* Assets.xcassets */,
 				F39B5C16219F48CA00F602CE /* LaunchScreen.storyboard */,
 				F39B5C19219F48CA00F602CE /* Info.plist */,
+				F39B5C1F219F48E300F602CE /* Song */,
 			);
 			path = MuzacPlayer;
+			sourceTree = "<group>";
+		};
+		F39B5C1F219F48E300F602CE /* Song */ = {
+			isa = PBXGroup;
+			children = (
+				F39B5C20219F48E300F602CE /* A Girl in Oakland.mp3 */,
+				F39B5C21219F48E300F602CE /* Find My Way Home.mp3 */,
+				F39B5C22219F48E300F602CE /* Fingers.mp3 */,
+				F39B5C23219F48E300F602CE /* In Case You Forgot.mp3 */,
+				F39B5C24219F48E300F602CE /* Mighty Fine.mp3 */,
+				F39B5C25219F48E300F602CE /* Otis McMusic.mp3 */,
+				F39B5C26219F48E300F602CE /* Scarlet Fire.mp3 */,
+			);
+			path = Song;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +154,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F39B5C2D219F48E300F602CE /* Scarlet Fire.mp3 in Resources */,
 				F39B5C18219F48CA00F602CE /* LaunchScreen.storyboard in Resources */,
+				F39B5C2C219F48E300F602CE /* Otis McMusic.mp3 in Resources */,
+				F39B5C2B219F48E300F602CE /* Mighty Fine.mp3 in Resources */,
+				F39B5C2A219F48E300F602CE /* In Case You Forgot.mp3 in Resources */,
+				F39B5C28219F48E300F602CE /* Find My Way Home.mp3 in Resources */,
 				F39B5C15219F48CA00F602CE /* Assets.xcassets in Resources */,
 				F39B5C13219F48C900F602CE /* Main.storyboard in Resources */,
+				F39B5C27219F48E300F602CE /* A Girl in Oakland.mp3 in Resources */,
+				F39B5C29219F48E300F602CE /* Fingers.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
