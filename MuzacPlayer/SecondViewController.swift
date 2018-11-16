@@ -10,10 +10,15 @@ import UIKit
 import AVFoundation
 
 class SecondViewController: UIViewController {
-
+    
+    var timer = Timer();
+    
     @IBOutlet weak var songLabel: UILabel!
     @IBOutlet weak var songImage: UIImageView!
+    @IBOutlet weak var timeRemaining: UILabel!
+    @IBOutlet weak var timePlayed: UILabel!
     
+ 
     
     @IBAction func fourTImesSpeed(_ sender: Any) {
         audioPlayer.stop()
@@ -24,7 +29,8 @@ class SecondViewController: UIViewController {
         
     }
     @IBAction func twoTimesSpeed(_ sender: Any) {
-        audioPlayer.stop()        audioPlayer.prepareToPlay()
+        audioPlayer.stop()
+        audioPlayer.prepareToPlay()
         audioPlayer.enableRate = true
         audioPlayer.rate = 2.0
         audioPlayer.play()
@@ -100,6 +106,7 @@ class SecondViewController: UIViewController {
             let audioPath = Bundle.main.path(forResource: thisOne, ofType: ".mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
             audioPlayer.play()
+           // updateTimes()
         }
         catch
         {
@@ -108,9 +115,21 @@ class SecondViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        scheduledTimerWithTimeInterval()
+        
     }
 
-
+    func scheduledTimerWithTimeInterval(){
+        // Scheduling timer to Call the function "updateCounting" with the interval of 1 seconds
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateCounting), userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateCounting(){
+        let r = Double(round(100 * (audioPlayer.duration - audioPlayer.currentTime))/100)
+        let t = Double(round(100 * (audioPlayer.currentTime ))/100)
+        timeRemaining.text = "Time Left: " + String(r) + "s"
+        timePlayed.text = "Time Played: " + String(t) + "s"
+    }
+    
 }
 
