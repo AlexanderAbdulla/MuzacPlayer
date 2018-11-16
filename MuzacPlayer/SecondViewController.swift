@@ -14,6 +14,41 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var songLabel: UILabel!
     @IBOutlet weak var songImage: UIImageView!
     
+    
+    @IBAction func fourTImesSpeed(_ sender: Any) {
+        audioPlayer.stop()
+        audioPlayer.prepareToPlay()
+        audioPlayer.enableRate = true
+        audioPlayer.rate = 4.0
+        audioPlayer.play()
+        
+    }
+    @IBAction func twoTimesSpeed(_ sender: Any) {
+        audioPlayer.stop()        audioPlayer.prepareToPlay()
+        audioPlayer.enableRate = true
+        audioPlayer.rate = 2.0
+        audioPlayer.play()
+        
+    }
+    
+    @IBAction func halfSpeed(_ sender: Any) {
+        audioPlayer.stop()
+        audioPlayer.prepareToPlay()
+        audioPlayer.enableRate = true
+        audioPlayer.rate = 0.5
+        audioPlayer.play()
+        
+    }
+    
+    @IBAction func fullSPeed(_ sender: Any) {
+        audioPlayer.stop()
+        audioPlayer.prepareToPlay()
+        audioPlayer.enableRate = true
+        audioPlayer.rate = 1.0
+        audioPlayer.play()
+        
+    }
+    
     @IBAction func playSong(_ sender: Any) {
         if audioStuffed == true && audioPlayer.isPlaying == false
         {
